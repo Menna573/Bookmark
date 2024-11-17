@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Fredericka+the+Great&family=Ysabeau+Office:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <!-- Font Icons CSS -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main class="pt-3 pb-5">
+       <div class="container">
+        <section id="bookmark" class="bookmark  p-3 p-sm-5">
+            <div class="title d-flex flex-column gap-5 justify-content-center align-items-center text-center">
+                <h1>Bookmarker</h1>
+                <h2><i class="fa-solid fa-bookmark text-white fs-4"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark text-white fs-4"></i></h2>
+            </div>
+            <div class="bookmarkInputs mt-3 d-flex flex-column align-items-center justify-content-center gap-md-3">
+                <div class="input w-100">
+                    <label for="bookmarkName"><i class="fa-solid fa-book-bookmark"></i> Site Name </label>
+                    <input type="text" id="bookmarkName" class="form-control mt-2" placeholder="Bookmark Name"
+                        oninput="validNameInput();" />
+                </div>
+                <div class="input pt-3 w-100">
+                    <label for="bookmarkURL"><i class="fa-solid fa-link"></i> Site URL</label>
+                    <input type="text" id="bookmarkURL" class="form-control mt-2" placeholder="Website URL"
+                        oninput="validURLInput()" />
+                </div>
+                <button onclick="addBookmark();" class="btn btn-main mt-4 px-4">Add Bookmark</button>
+            </div>
+        </section>
+        <section id="displayTable" class="pt-2 px-3 px-sm-5">
+            <table class="table text-center ">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="bookmarkContent"></tbody>
+            </table>
+        </section>
+       </div>
+    </main>
+
+    <!-- Main JS File -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/sweetalert.min.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
