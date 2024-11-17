@@ -92,8 +92,8 @@ function displayBookmarks(bookmarkList) {
     for (var i = 0; i < bookmarkList.length; i++) {
         tableContent += `
     <tr>
-      <td class="pt-3">${i + 1}</td>
-      <td class="pt-3">${bookmarkList[i].siteName}</td>
+      <td>${i + 1}</td>
+      <td>${bookmarkList[i].siteName}</td>
       <td><button class="btn btn-outline-main" onclick="visitWebsite(${i});"><i class="fa-solid fa-eye"></i> Visit</button></td>
       <td><button class="btn btn-outline-main" onclick="deleteBookmark(${i});"><i class="fa-solid fa-trash-can"></i> Delete</button></td>
     </tr>

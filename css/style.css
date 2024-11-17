@@ -10,6 +10,10 @@
     background-color: #fff;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body {
     letter-spacing: 0.125rem;
     color: #fff;
@@ -55,7 +59,7 @@ main {
     min-height: 100vh;
     background-image: linear-gradient(#57379174,#5b408ca7);
     background-size: cover;
-    background-position-y: center;
+    background-position: center;
 }
 
 h1{
@@ -80,8 +84,8 @@ h1:hover::before {
     height: 50%;
 }
 
-h2 i {
-    font-size: 1.125rem;
+h2{
+    font-size: 1.75rem;
 }
 
 main .form-control:focus {
@@ -91,11 +95,14 @@ main .form-control:focus {
 
 table th {
     color: #6d42b6 !important;
+    vertical-align: middle !important;
+    white-space: nowrap;
 }
 
 table tbody td {
     color: #583f80e6 !important;
-
+    vertical-align: middle !important;
+    white-space: nowrap;
 }
 
 /*^---------------------------------------------------------- Sweet alert --------------------------------------------------------------*/
@@ -134,4 +141,8 @@ table tbody td {
     border-color: #5b408cdd;
 }
 
-
+@media screen and (max-width: 450px) {
+    :root {
+      font-size: 11px;
+    }
+  }
